@@ -18,7 +18,7 @@ Future<Map<String, List<String>>> getData() async {
       'animeTitle': AnimeTitle,
       'animeImg': AnimeImg,
     };
-    print(animeData);
+    print("RUN");
     return animeData;
   } else {
     throw Exception('Failed to Load data');

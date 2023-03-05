@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mikiflix/pages/recent_relase.dart';
 import '../services/api.dart';
 import '../widgets/anime_card.dart';
+import '../styles/fonts.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
+
+  static final List<Widget> _listPage = <Widget>[];
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -15,42 +19,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(style: TextStyles.title, widget.title),
       ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FutureBuilder(
-              future: getData(),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  Map<String, List<String>> animeInfo = snapshot.data!;
-                  List<String> animeTitle = animeInfo['animeTitle']!;
-                  List<String> animeImg = animeInfo['animeImg']!;
-                  return Expanded(
-                    child: ListView.builder(  
-                      itemCount: animeTitle.length,
-                      itemBuilder: (context, index) {
-                        return AnimeCard(image: animeImg[index], title: animeTitle[index],);
-                      },
-                    ),
-                  );
-                } else if (snapshot.hasError) {
-                  return Center(
-                    child: Text(
-                      'Failed to load data: ${snapshot.error}',
-                      style: const TextStyle(color: Colors.red),
-                    ),
-                  );
-                } else {
-                  return const CircularProgressIndicator();
-                }
-              },
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: RecentRelase(),
         ),
       ),
     );
   }
 }
+
