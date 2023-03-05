@@ -1,16 +1,26 @@
 # Mikiflix
 
-A new Flutter project.
+Mikiflix is a free anime streaming site where you can watch your favorite anime shows and movies online. The site is named after Miki Sayaka from Madoka Magica, one of the most beloved and tragic characters in the series.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+Mikiflix is still under development, but in the future we hope to have the following features:
 
-A few resources to get you started if this is your first Flutter project:
+- A wide selection of anime shows and movies
+- High-quality video streaming
+- Simple and easy-to-use interface
+- Search and filter functions to find your favorite anime
+- Ability to create an account and save your favorite shows and movies
+- Regularly updated with new anime content
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologies Used
+Mikiflix is built using the following technologies:
+- Flutter
+- Consumet API
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Acknowledgments
+
+We would like to thank the Consumet, the API provider that is consumed by Mikiflix for providing us with access to their database of anime shows and movies. Their API has been instrumental in helping us build our site and offer a wide selection of anime content to our users.
+
+Alse special thanks to the creators of Madoka Magica for inspiring the name of this site, and to the community of anime fans who continue to support and enjoy anime.
+
