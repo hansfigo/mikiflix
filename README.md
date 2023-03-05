@@ -1,4 +1,4 @@
-# mikiflix
+# Mikiflix
 
 A new Flutter project.
 
