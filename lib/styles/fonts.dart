@@ -15,9 +15,5 @@ class TextStyles {
     color: Colors.black,
   );
 
-  static final TextStyle description = GoogleFonts.viga(
-    fontSize: 14,
-    fontWeight: FontWeight.w300,
-    color: Colors.grey,
-  );
+
 }
