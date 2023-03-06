@@ -10,30 +10,32 @@ class AnimeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.transparent,
-      elevation: 0,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
-            child: Image.network(
-              image,
-              fit: BoxFit.fitHeight,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Text(
-              maxLines: 2,
-              title,
-              style: TextStyle(
-                fontSize: 18,
+    return SizedBox(
+      child: Card(
+        color: Colors.transparent,
+        elevation: 0,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: Image.network(
+                image,
+                fit: BoxFit.fitHeight,
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Text(
+                maxLines: 2,
+                title,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

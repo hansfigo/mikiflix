@@ -25,7 +25,7 @@ class RecentRelase extends StatelessWidget {
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                       maxCrossAxisExtent: 200,
-                      childAspectRatio: 0.50,
+                      childAspectRatio: 0.55,
                       crossAxisSpacing: 4,
                       mainAxisSpacing: 4),
                   itemCount: animeImg.length,
